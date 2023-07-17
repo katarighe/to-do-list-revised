@@ -1,0 +1,242 @@
+@import url(https://use.fontawesome.com/releases/v6.0.0/css/all.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdab9;
+}
+
+.to-do-container {
+  display: grid;
+  width: 150%;
+  min-height: 50vh;
+  margin: 10vh 0;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(10, 10, 10, 0.15);
+  border-radius: 10px;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.to-do-list-group {
+  width: 100%;
+}
+
+.to-do-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  border-bottom: 1px #ddd solid;
+}
+
+.to-do-intro {
+  font-size: 15px;
+  background-color: #f5f5dc;
+}
+
+.to-do-intro-title {
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  justify-content: center;
+  background-color: #f5f5dc;
+}
+
+.to-do-intro i {
+  font-size: 15px;
+  opacity: 0.5;
+  color: #333;
+}
+
+.to-do-add * {
+  color: #ddd;
+}
+
+.to-do-add input {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #000;
+  background-color: transparent;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.to-do-add input::placeholder {
+  color: #808080;
+}
+
+.to-do-add i {
+  font-size: 12px;
+}
+
+.uncheck-icon,
+.check-icon {
+  outline: none;
+  border: none;
+}
+
+.check-icon {
+  background: transparent;
+  color: #2e2e2e;
+  cursor: pointer;
+  font-size: 20px;
+  width: 18px;
+  height: 18px;
+}
+
+.uncheck-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 2px #ddd solid;
+  cursor: pointer;
+  color: #fff;
+}
+
+.to-do-item input {
+  width: calc(100% - 30px);
+  padding: 0 15px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-align: start;
+}
+
+.decorate {
+  opacity: 0.5;
+  color: #333;
+  text-decoration: line-through;
+}
+
+.undecorate {
+  color: #000;
+  text-decoration: none;
+}
+
+.delete-icon,
+.more-icon {
+  font-size: 20px;
+  opacity: 0.5;
+  color: #000;
+  cursor: pointer;
+}
+
+.delete-icon {
+  display: none;
+}
+
+.more-icon {
+  display: block;
+}
+
+.to-do-item-more {
+  font-size: 16px;
+  opacity: 0.5;
+  color: #333;
+  cursor: pointer;
+}
+
+.more-icon:hover {
+  color: #800080;
+}
+
+.clear-to-do-list {
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  outline: none;
+  border: 1px;
+  background-color: #f5f5dc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.clear-to-do-list span {
+  color: #ec5242;
+}
+
+.clear-to-do-list span:hover {
+  opacity: 1;
+  color: #000;
+  text-decoration: none;
+}
+
+.edit-focus-element {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  background-color: #fff;
+}
+
+.delete-icon:active {
+  display: block;
+}
+
+.delete-icon:hover {
+  color: #f00;
+}
+
+.edit-to-do:focus ~ .edit-focus-element {
+  background-color: #fffcbf;
+}
+
+.edit-to-do:focus ~ .delete-icon {
+  display: block;
+}
+
+.edit-to-do:focus ~ .more-icon {
+  display: none;
+}
+
+.delete-icon:active ~ .more-icon {
+  display: none;
+}
+
+.refresh-icon {
+  color: #000;
+  cursor: pointer;
+}
+
+.refresh-icon::before {
+  font-size: 20px;
+}
+
+.refresh-icon:hover {
+  opacity: 1;
+  color: #add8e6;
+  text-decoration: none;
+}
+
+.add-icon {
+  color: #808080;
+  cursor: pointer;
+}
+
+.add-icon::before {
+  font-size: 20px;
+}
+
+.add-icon:hover {
+  opacity: 1;
+  color: #90ee90;
+  text-decoration: none;
+}
